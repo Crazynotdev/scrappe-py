@@ -1,7 +1,0 @@
-txt
-requests
-beautifulsoup4
-pandas
-lxml
-aiohttp
-async_timeout
