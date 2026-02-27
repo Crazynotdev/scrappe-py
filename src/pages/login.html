@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <h2>Connexion</h2><br>
+    <input id="email" placeholder="Email"><br><br>
+    <input id="password" type="password" placeholder="Mot de passe"><br><br>
+    <button id="login">Se connecter</button>
+  </div>
+</div>
+
+<script type="module">
+import { signIn } from "../core/auth";
+
+document.getElementById("login").onclick = async()=>{
+  const email = email.value;
+  const password = password.value;
+  const { error } = await signIn(email,password);
+  if(!error) location.href="home.html";
+}
+</script>
