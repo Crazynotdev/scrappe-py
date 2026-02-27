@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card">
+    <h2>Dashboard</h2>
+    <p id="points">Chargement...</p>
+  </div>
+</div>
+
+<script type="module">
+import { getProfile } from "../core/api";
+
+(async()=>{
+  const p = await getProfile();
+  points.innerText = `Points : ${p.total_points}`;
+})();
+</script>
